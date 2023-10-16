@@ -17,8 +17,11 @@
     <div class="head-img"> <img src="../images/logo.png" alt=""> </div>
 
     <div class="head-link">
-      <h2 onclick="window.location=''"> Sobre </h2>
-      <h2 onclick="window.location=''"> Cadastro </h2>
+       <h2 onclick="window.location='/views/sobre.html'"> 
+        <a href="/views/sobre.html"></a> Sobre </h2>
+      <h2 onclick="window.location='/views/Cadastro.html'"> 
+        <a href="/views/Cadastro.html"></a>Cadastro </h2>
+
       <h2 onclick="window.location=''"> Login </h2>
     </div>
   </div>
