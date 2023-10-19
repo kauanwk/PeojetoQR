@@ -124,3 +124,11 @@ body {
   background: rgba(84, 105, 172, 0.712);
   color: white;
 }
+
+.form body{
+  text-align: center; /* Centraliza o texto dentro do formulário */
+  margin: 0 auto; /* Centraliza o formulário na horizontal */
+  width: 300px; /* Defina a largura desejada para o formulário */
+  border: 2px solid blue; /* Adiciona uma borda azul ao redor do formulário */
+  padding: 20px; /* Adiciona espaço interno para melhor aparência */
+}
