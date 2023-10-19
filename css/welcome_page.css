@@ -125,7 +125,8 @@ body {
   color: white;
 }
 
-.form body{
+#Formulario {
+background-color: blue;
   text-align: center; /* Centraliza o texto dentro do formulário */
   margin: 0 auto; /* Centraliza o formulário na horizontal */
   width: 300px; /* Defina a largura desejada para o formulário */

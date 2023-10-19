@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/welcome_page.css">
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
   <title>QR Presença</title>
 </head>
 
