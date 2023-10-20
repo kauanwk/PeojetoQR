@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "35432324";
-$database = "projetoqr";
+$password = "root";
+$database = "projetoQR";
 
 $conexao = new mysqli($servername, $username, $password, $database);
 

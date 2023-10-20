@@ -17,9 +17,9 @@ $banco = fopen("banco.csv", "r");
 
   <?php endwhile ?>
 
-  <div id="Formulario">
-    <h2>Adicionar</h2>
-    <form class="formes" action="adicionar.php" method="POST">
+  <div id="formulario">
+    <h2>Cadastro</h2>
+    <form action="adicionar.php" method="POST">
       <div>
         <label>Nome:</label>
         <input name="nome" type="text" placeholder="Escreva seu nome...">
@@ -28,6 +28,17 @@ $banco = fopen("banco.csv", "r");
         <label>idade:</label>
         <input name="idade" type="number" placeholder="Coloque sua idade...">
       </div>
+      <div>
+        <label>E-mail:</label>
+        <input name="email" type="email" placeholder="Digite seu e-mail...">
+      </div>
+
+      <div>
+        <label>Senha:</label>
+        <input name="senha" type="password" placeholder="Digite sua senha...">
+      </div>
+
+
       <button>Adicionar</button>
 
     </form>

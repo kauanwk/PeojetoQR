@@ -125,11 +125,17 @@ body {
   color: white;
 }
 
-#Formulario {
-background-color: blue;
+#formulario {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background-color: rgba(255, 255, 255, 0.788);
   text-align: center; /* Centraliza o texto dentro do formulário */
   margin: 0 auto; /* Centraliza o formulário na horizontal */
   width: 300px; /* Defina a largura desejada para o formulário */
-  border: 2px solid blue; /* Adiciona uma borda azul ao redor do formulário */
-  padding: 20px; /* Adiciona espaço interno para melhor aparência */
+  border: 2px solid rgba(22, 22, 214, 0.507); /* Adiciona uma borda azul ao redor do formulário */
+  padding: 30px; /* Adiciona espaço interno para melhor aparência */
 }
