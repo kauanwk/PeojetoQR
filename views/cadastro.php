@@ -1,7 +1,3 @@
-<?php
-$banco = fopen("banco.csv", "r");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +9,6 @@ $banco = fopen("banco.csv", "r");
 </head>
 
 <body>
-  <?php while (($linha = fgetcsv($banco)) !== false) : ?>
-
-  <?php endwhile ?>
-
   <div id="formulario">
     <h2>Cadastro</h2>
     <form action="adicionar.php" method="POST">
