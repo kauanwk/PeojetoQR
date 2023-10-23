@@ -19,4 +19,4 @@ return $conexao;
  `email` VARCHAR(255) NOT NULL ,
 `idade` INT NOT NULL , 
 `senha` VARCHAR(255) NOT NULL , 
-PRIMARY KEY (`id`)) ENGINE = InnoDB; Não apague quem apagar e viado*/
+PRIMARY KEY (`id`)) ENGINE = InnoDB; Não apague */
