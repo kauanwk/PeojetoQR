@@ -10,9 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conexao->query($sql) === TRUE) {
         echo "Registro atualizado com sucesso!";
     } else {
-        echo "Erro ao atualizar registro: " . $conexao->error;
+        echo "Erro ao atualizar registro: " .implode(", ", $conexao->errorInfo());
     }
 }
-
-$conexao->close();
-?>

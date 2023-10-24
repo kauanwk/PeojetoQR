@@ -1,13 +1,22 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $database = "projetoQR";
 
-$conexao = new mysqli($servername, $username, $password, $database);
+try {
+    $conexao = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Conexão falhou: " . $e->getMessage());
+}
 
-if ($conexao->connect_error) {
-    die("Conexão falhou: " . $conexao->connect_error);
-} 
 return $conexao;
-?>
+
+
+/*CREATE TABLE `projetoqr`.`user` (`id` INT NOT NULL AUTO_INCREMENT , 
+`nome` VARCHAR(100) NOT NULL ,
+ `email` VARCHAR(255) NOT NULL ,
+`idade` INT NOT NULL , 
+`senha` VARCHAR(255) NOT NULL , 
+PRIMARY KEY (`id`)) ENGINE = InnoDB; Não apague */
