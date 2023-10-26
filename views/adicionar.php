@@ -8,7 +8,7 @@ $senha = $_POST['senha'];
 
 
 // Use uma declaração preparada para inserir os dados de forma segura
-$sql = "INSERT INTO user (nome, email, idade, senha) VALUES (:nome, :email, :idade, :senha)";
+$sql = "INSERT INTO cadastro (nome, email, idade, senha) VALUES (:nome, :email, :idade, :senha)";
 $stmt = $conexao->prepare($sql);
 
 // Vincule os valores dos parâmetros com bindValue
