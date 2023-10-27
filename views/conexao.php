@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "projetoQR";
+$database = "projetoqr";
 
 try {
     $conexao = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
