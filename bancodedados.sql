@@ -1,4 +1,3 @@
-
 CREATE DATABASE IF NOT EXISTS projetoQR;
 
 USE projetoQR;
@@ -10,3 +9,4 @@ CREATE TABLE user (
     idade INT NOT NULL,
     senha VARCHAR(255) NOT NULL
 );
+

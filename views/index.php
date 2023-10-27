@@ -24,8 +24,8 @@
       <h2 onclick="window.location='/ProjetoQR/views/cadastro.php'">
         <a href="/ProjetoQR/views/cadastro.php"></a>Cadastro
       </h2>
-      <h2 onclick="window.location=''"> <a href="login.php">Login</a></h2>
 
+      <h2 onclick="window.location='login.php'"> Login </h2>
     </div>
   </div>
 
@@ -50,7 +50,7 @@
   </div>
 
   <?php
-
+  
   ?>
 </body>
 
