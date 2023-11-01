@@ -1,3 +1,37 @@
+<?php
+include 'conexao.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recuperar os dados do formulário
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    try {
+        // Consulta para verificar as credenciais
+        $query = "SELECT * FROM cadastro WHERE email = :email AND senha = :senha";
+        $stmt = $conexao->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':senha', $password);
+        $stmt->execute();
+
+        // Verifica se as credenciais são válidas
+        if ($stmt->rowCount() > 0) {
+            // Credenciais válidas, redirecione ou faça outras ações
+            header("Location: index.php");
+            exit();
+        } else {
+            // Credenciais inválidas
+            echo "Credenciais inválidas. Tente novamente.";
+        }
+    } catch (PDOException $e) {
+        echo "Erro de conexão: " . $e->getMessage();
+    } finally {
+        // Não é necessário fechar a conexão explicitamente, pois o PHP o fará automaticamente no final do script.
+        // $conexao = null;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

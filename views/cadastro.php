@@ -24,7 +24,10 @@
         <label>E-mail:</label>
         <input name="email" type="email" placeholder="Digite seu e-mail...">
       </div>
-
+      <div>
+        <label>Telefone:</label>
+        <input name="telefone" type="text" placeholder="Digite seu telefone...">
+      </div>
       <div>
         <label>Senha:</label>
         <input name="senha" type="password" placeholder="Digite sua senha...">
