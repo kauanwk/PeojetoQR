@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -14,23 +14,23 @@
     <form action="adicionar.php" method="POST">
       <div>
         <label>Nome:</label>
-        <input name="nome" type="text" placeholder="Escreva seu nome...">
+        <input name="nome" id="nome" placeholder="Escreva seu nome...">
       </div>
       <div>
         <label>idade:</label>
-        <input name="idade" type="number" placeholder="Coloque sua idade...">
+        <input name="idade" id="idade" placeholder="Coloque sua idade...">
       </div>
       <div>
         <label>E-mail:</label>
-        <input name="email" type="email" placeholder="Digite seu e-mail...">
+        <input name="email" id="email" placeholder="Digite seu e-mail...">
       </div>
       <div>
         <label>Telefone:</label>
-        <input name="telefone" type="text" placeholder="Digite seu telefone...">
+        <input name="telefone" id="telefone" type="text" placeholder="Digite seu telefone...">
       </div>
       <div>
         <label>Senha:</label>
-        <input name="senha" type="password" placeholder="Digite sua senha...">
+        <input name="senha" id="senha" placeholder="Digite sua senha...">
       </div>
 
 

@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verifica se as credenciais são válidas
         if ($stmt->rowCount() > 0) {
             // Credenciais válidas, redirecione ou faça outras ações
-            header("Location: index.php");
+            header("Location: acesso.php");
             exit();
         } else {
             // Credenciais inválidas
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
