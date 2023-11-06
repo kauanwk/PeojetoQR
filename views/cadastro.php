@@ -14,7 +14,7 @@
     <form action="adicionar.php" method="POST">
       <div>
         <label>Nome:</label>
-        <input name="nome" type="text" placeholder="Escreva seu nome...">
+        <input name="nome" type="text" placeholder="Escreva seu nome completo...">
       </div>
       <div>
         <label>idade:</label>
