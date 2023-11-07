@@ -38,7 +38,7 @@
         simples gesto: apontar e registrar </p>
 
       <div class="botao">
-        <button onclick="window.location=''"> Entrar </button>
+       <button onclick="window.location='/ProjetoQR/views/login.php'"> Entrar </button> 
       </div>
     </div>
 

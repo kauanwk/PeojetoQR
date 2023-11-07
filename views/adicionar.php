@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 // Recupere os dados do formulário
 $nome = $_POST['nome'];
 $email = $_POST['email'];
-$idade = $_POST['idade'];
+$idade = $_POST['idade']; 
 $senha = $_POST['senha'];
 
 
