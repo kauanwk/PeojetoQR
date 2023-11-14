@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } else {
             // Credenciais inválidas
-            echo "Credenciais inválidas. Tente novamente.";
+            echo "Email ou Senha inválidos. Tente novamente.";
         }
     } catch (PDOException $e) {
         echo "Erro de conexão: " . $e->getMessage();
