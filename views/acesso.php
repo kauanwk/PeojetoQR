@@ -14,7 +14,8 @@
 </head>
 
 <body>
-
+  <div class="cuida">SEJAM BEM-VINDOS</div>
 </body>
+
 
 </html>
