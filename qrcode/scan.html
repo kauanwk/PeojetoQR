@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Scanner</title>
+  <!-- Inclua a biblioteca html5-qrcode do CDN -->
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+  <!-- Contêiner HTML para o scanner -->
+  <div id="reader" style="width: 600px;"></div>
+
+  <!-- Tabela para exibir os resultados do escaneamento -->
+  <table id="resultsTable" border="1">
+    <tr>
+      <th>Código QR Escaneado</th>
+    </tr>
+  </table>
+
+  <!-- Seu script personalizado -->
+  <script>
+    let html5QrCode = null; // Variável para armazenar a instância do scanner
+    const scannedCodes = new Set(); // Conjunto para rastrear códigos já escaneados
+
+    // Função de retorno de chamada para o sucesso do escaneamento
+    function onScanSuccess(decodedText, decodedResult) {
+      // Verificar se o código já foi escaneado
+      if (!scannedCodes.has(decodedText)) {
+        // Adicionar resultado à tabela se ainda não foi escaneado
+        addToTable(decodedText);
+        scannedCodes.add(decodedText); // Adicionar ao conjunto de códigos escaneados
+      }
+
+      // Parar o scanner após o sucesso do escaneamento
+      html5QrCode.clear();
+      // ^ Isso irá parar o scanner (feed de vídeo) e limpar a área de escaneamento.
+    }
+
+    // Função de retorno de chamada para a falha no escaneamento
+    function onScanFailure(error) {
+      // Ignore ou faça algo com o erro, conforme necessário
+    }
+
+    // Função para adicionar resultados à tabela
+    function addToTable(decodedText) {
+      const table = document.getElementById("resultsTable");
+      const row = table.insertRow(1); // Insere uma nova linha (após o cabeçalho)
+      const cell1 = row.insertCell(0);
+      cell1.innerHTML = decodedText;
+    }
+
+    // Inicializar o scanner ao clicar no botão "Iniciar Scanner"
+    document.getElementById('startButton').addEventListener('click', () => {
+      html5QrCode = new Html5Qrcode("reader");
+      html5QrCode.start(
+        { facingMode: "environment" }, // Configuração da câmera (use "user" para a câmera frontal)
+        { fps: 10, qrbox: { width: 250, height: 250 } }, // Opções de escaneamento
+        onScanSuccess, // Função de retorno de chamada para sucesso
+        onScanFailure  // Função de retorno de chamada para falha
+      )
+      .catch((err) => {
+        // Lidar com a falha no início do escaneamento
+      });
+    });
+
+    // Parar o scanner ao clicar no botão "Parar Scanner"
+    document.getElementById('stopButton').addEventListener('click', () => {
+      if (html5QrCode) {
+        html5QrCode.stop()
+          .then(() => {
+            // Lidar com o sucesso ao parar o scanner
+          })
+          .catch((err) => {
+            // Lidar com a falha ao parar o scanner
+          })
+          .finally(() => {
+            html5QrCode = null; // instância do scanner como nula
+          });
+      }
+    });
+  </script>
+
+  <!-- Código do Scanner -->
+  <div style="width: 500px" id="reader"></div>
+  <script>
+    var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 });
+    html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+  </script>
+</body>
+</html>

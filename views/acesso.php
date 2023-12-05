@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="cuida">SEJAM BEM-VINDOS</div>
+<button onclick="window.location='/ProjetoQR/qrcode/scan.html'"> Entrar </button> 
 </body>
 
 
