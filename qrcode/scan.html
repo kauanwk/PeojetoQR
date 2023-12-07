@@ -44,10 +44,12 @@
 
     // Função para adicionar resultados à tabela
     function addToTable(decodedText) {
-      const table = document.getElementById("resultsTable");
-      const row = table.insertRow(1); // Insere uma nova linha (após o cabeçalho)
-      const cell1 = row.insertCell(0);
-      cell1.innerHTML = decodedText;
+      
+      document.getElementById('id_usuario').value= decodedText;
+      //const table = document.getElementById("resultsTable");
+      //const row = table.insertRow(1); // Insere uma nova linha (após o cabeçalho)
+      //const cell1 = row.insertCell(0);
+      //cell1.innerHTML = decodedText;
     }
 
     // Inicializar o scanner ao clicar no botão "Iniciar Scanner"
@@ -87,5 +89,22 @@
     var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 });
     html5QrcodeScanner.render(onScanSuccess, onScanFailure);
   </script>
+  <form action="" method="POST">
+    <div>
+      <H1> Faça seu login </H1>
+    </div>
+    <div class="container-form">
+      <label for="id_usuario"> id_usuario </label>
+      <input name="id_usuario" id="email" required>
+    </div>
+    
+    <div class="button">
+      <button>
+        SALVAR
+      </button>
+    </div>
+  </form>
+
+
 </body>
 </html>
