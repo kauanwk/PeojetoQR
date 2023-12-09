@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION['error_message'])) {
+  echo '<p class="erro">' . $_SESSION['error_message'] . '</p>';
+
+  // Limpe a mensagem de erro da sessão após exibi-la
+  unset($_SESSION['error_message']);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
