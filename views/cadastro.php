@@ -1,3 +1,11 @@
+?php
+session_start();
+if (isset($_SESSION['success_message'])) {
+    echo '<p class="success">' . $_SESSION['success_message'] . '</p>';
+    unset($_SESSION['success_message']);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,7 +38,12 @@
       </div>
       <div>
         <label>Senha:</label>
-        <input name="senha" id="senha" placeholder="Digite sua senha...">
+        <input name="senha" id="senha" type="password" placeholder="Digite sua senha...">
+        <div>
+   <label>Confirme a Senha:</label>
+   <input name="confirma_senha" id="confirma_senha" type="password" placeholder="Confirme sua senha...">
+</div>
+
       </div>
 
 
