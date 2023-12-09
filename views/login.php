@@ -4,20 +4,20 @@ include 'conexao.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recuperar os dados do formulário
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $senha_digitada = $_POST['password'];
 
     try {
         // Consulta para verificar as credenciais
         $query = "SELECT * FROM cadastro WHERE email = :email AND senha = :senha";
         $stmt = $conexao->prepare($query);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $password);
+        $stmt->bindParam(':senha', $senha_digitada);
         $stmt->execute();
 
         // Verifica se as credenciais são válidas
         if ($stmt->rowCount() > 0) {
             // Credenciais válidas, redirecione ou faça outras ações
-            header("Location: acesso.php");
+            header("Location: /ProjetoQR/views/acesso.php");
             exit();
         } else {
             // Credenciais inválidas
@@ -30,6 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // $conexao = null;
     }
 }
+?>
+
+
 ?>
 
 <!DOCTYPE html>
