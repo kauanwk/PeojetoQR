@@ -44,43 +44,13 @@
 
     // Função para adicionar resultados à tabela
     function addToTable(decodedText) {
-      
-      document.getElementById('id_usuario').value= decodedText;
-      //const table = document.getElementById("resultsTable");
-      //const row = table.insertRow(1); // Insere uma nova linha (após o cabeçalho)
-      //const cell1 = row.insertCell(0);
-      //cell1.innerHTML = decodedText;
+      const table = document.getElementById("resultsTable");
+      const row = table.insertRow(1); // Insere uma nova linha (após o cabeçalho)
+      const cell1 = row.insertCell(0);
+      cell1.innerHTML = decodedText;
     }
 
-    // Inicializar o scanner ao clicar no botão "Iniciar Scanner"
-    document.getElementById('startButton').addEventListener('click', () => {
-      html5QrCode = new Html5Qrcode("reader");
-      html5QrCode.start(
-        { facingMode: "environment" }, // Configuração da câmera (use "user" para a câmera frontal)
-        { fps: 10, qrbox: { width: 250, height: 250 } }, // Opções de escaneamento
-        onScanSuccess, // Função de retorno de chamada para sucesso
-        onScanFailure  // Função de retorno de chamada para falha
-      )
-      .catch((err) => {
-        // Lidar com a falha no início do escaneamento
-      });
-    });
-
-    // Parar o scanner ao clicar no botão "Parar Scanner"
-    document.getElementById('stopButton').addEventListener('click', () => {
-      if (html5QrCode) {
-        html5QrCode.stop()
-          .then(() => {
-            // Lidar com o sucesso ao parar o scanner
-          })
-          .catch((err) => {
-            // Lidar com a falha ao parar o scanner
-          })
-          .finally(() => {
-            html5QrCode = null; // instância do scanner como nula
-          });
-      }
-    });
+   
   </script>
 
   <!-- Código do Scanner -->
@@ -89,22 +59,5 @@
     var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 });
     html5QrcodeScanner.render(onScanSuccess, onScanFailure);
   </script>
-  <form action="" method="POST">
-    <div>
-      <H1> Faça seu login </H1>
-    </div>
-    <div class="container-form">
-      <label for="id_usuario"> id_usuario </label>
-      <input name="id_usuario" id="email" required>
-    </div>
-    
-    <div class="button">
-      <button>
-        SALVAR
-      </button>
-    </div>
-  </form>
-
-
 </body>
 </html>
