@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['success_message'] = "Registro inserido com sucesso!";
 
         // Redirecione para /ProjetoQR/views/index.php
-        header("Location: /ProjetoQR/views/cadastro.php");
+        header("Location: /ProjetoQR/views/login.php");
         exit(); // Certifique-se de sair após o redirecionamento para evitar execução adicional do código
     } catch (Exception $e) {
         // Em caso de erro, redirecione de volta para a página de cadastro com uma mensagem de erro
