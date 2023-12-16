@@ -48,7 +48,8 @@ if (isset($_SESSION['error_message'])) {
         simples gesto: apontar e registrar </p>
 
       <div class="botao">
-       <button onclick="window.location='/ProjetoQR/views/login.php'"> Entrar </button> 
+        <button onclick="window.location='/ProjetoQR/views/login.php'"> Entrar </button>
+        <h2 onclick="window.location='login.php'"></h2>
       </div>
     </div>
 

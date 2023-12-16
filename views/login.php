@@ -54,10 +54,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="head-img"> <img src="../images/logo.png" alt=""> </div>
 
     <div class="head-link">
-      <h2 onclick="window.location=''"> Sobre </h2>
-      <h2 onclick="window.location=''"> Cadastro </h2>
-      <h2 onclick="window.location=''"> Login </h2>
+      <h2 onclick="window.location='sobre.php'">Sobre</h2>
+      <h2 onclick="window.location='cadastro.php'">Cadastro</h2>
+      <h2 onclick="window.location='login.php'">Login</h2>
     </div>
+
   </div>
   <div class="main">
     <div class="div1">
@@ -91,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </form>
     </div>
 
-    <div class="div2">
-      <img class="img" src="../images/Enter OTP-bro.png" alt="">
+    <div class="div21">
+      <img class="img1" src="../images/Enter.png" alt="">
     </div>
   </div>

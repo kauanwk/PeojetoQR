@@ -1,0 +1,31 @@
+[33m30786c5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m alterações
+[33m07f33e4[m Update bancodedados.sql
+[33ma7bcb71[m Update login.php
+[33mc1e952e[m pagina acesso.php
+[33m26c013d[m Update index.php
+[33me5ee64a[m Update cadastro.php
+[33m5191c5f[m tirei o phpdb
+[33m4a5fbda[m Adicionei arquivos de projeto QR
+[33m90404f0[m conexao do login co cadastro
+[33mac82753[m foto add
+[33m11307a1[m Merge branch 'master' of https://github.com/kauanwk/ProjetoQR
+[33me7ba5bd[m login feito
+[33m949dba6[m Update adicionar.php
+[33m40f41af[m Update conexao.php
+[33mee2c87d[m Merge branch 'master' of https://github.com/kauanwk/ProjetoQR
+[33m540c1da[m add phpbd,banco local
+[33m150d209[m minhas alteraçôes
+[33m58e7984[m minhas alteraçôes
+[33m6e01d91[m Update conexao.php
+[33m35be2a9[m apaguei o ler e o excluir
+[33mdadcbfa[m .css tela inicial
+[33m9088ed5[m fiz o cadastro
+[33mb9c162f[m teste
+[33m05d505e[m atualizaçoes do codigo no banco de dados e centalizaçao o cadastro
+[33m64aebab[m conexao com o banco de dados
+[33m92abf74[m Styles,cadastro e...
+[33m40743e0[m cadastro,adicionar e parte do index
+[33m3646107[m Delete ProjetoQR-master directory
+[33m412fb57[m index.php
+[33m43f0941[m coloquei uma link para o sobre e cadastro
+[33m9ee0ecd[m primeiro commit

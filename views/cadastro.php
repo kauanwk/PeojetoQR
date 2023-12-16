@@ -1,10 +1,9 @@
-?php
+<?php
 session_start();
 if (isset($_SESSION['success_message'])) {
-    echo '<p class="success">' . $_SESSION['success_message'] . '</p>';
-    unset($_SESSION['success_message']);
+  echo '<p class="success">' . $_SESSION['success_message'] . '</p>';
+  unset($_SESSION['success_message']);
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,44 +11,55 @@ if (isset($_SESSION['success_message'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/welcome_page.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <title>Cadastro</title>
 </head>
 
 <body>
-  <div id="formulario">
-    <h2>Cadastro</h2>
-    <form action="adicionar.php" method="POST">
-      <div>
-        <label>Nome:</label>
-        <input name="nome" type="text" placeholder="Escreva seu nome completo...">
-      </div>
-      <div>
-        <label>idade:</label>
-        <input name="idade" id="idade" placeholder="Coloque sua idade...">
-      </div>
-      <div>
-        <label>E-mail:</label>
-        <input name="email" id="email" placeholder="Digite seu e-mail...">
-      </div>
-      <div>
-        <label>Telefone:</label>
-        <input name="telefone" id="telefone" type="text" placeholder="Digite seu telefone...">
-      </div>
-      <div>
-        <label>Senha:</label>
-        <input name="senha" id="senha" type="password" placeholder="Digite sua senha...">
+  <div class="head">
+    <div class="head-img"> <img src="../images/logo.png" alt=""> </div>
+    <div class="head-link">
+      <h2 onclick="window.location='sobre.php'">Sobre</h2>
+      <h2 onclick="window.location='cadastro.php'">Cadastro</h2>
+      <h2 onclick="window.location='login.php'">Login</h2>
+    </div>
+  </div>
+  <div class="main">
+    <div class="div1">
+      <form action="adicionar.php" method="POST">
         <div>
-   <label>Confirme a Senha:</label>
-   <input name="confirma_senha" id="confirma_senha" type="password" placeholder="Confirme sua senha...">
-</div>
-
-      </div>
-
-
-      <button>Adicionar</button>
-
-    </form>
+          <h1>Cadastro</h1>
+        </div>
+        <div class="container-form">
+          <label for="nome">Nome:</label>
+          <input name="nome" type="text" id="nome" placeholder="Escreva seu nome completo...">
+        </div>
+        <div class="container-form">
+          <label for="idade">Idade:</label>
+          <input name="idade" id="idade" placeholder="Coloque sua idade...">
+        </div>
+        <div class="container-form">
+          <label for="email">E-mail:</label>
+          <input name="email" id="email" placeholder="Digite seu e-mail...">
+        </div>
+        <div class="container-form">
+          <label for="telefone">Telefone:</label>
+          <input name="telefone" id="telefone" type="text" placeholder="Digite seu telefone...">
+        </div>
+        <div class="container-form">
+          <label for="senha">Senha:</label>
+          <input name="senha" id="senha" type="password" placeholder="Digite sua senha...">
+        </div>
+        <div class="container-form">
+          <label for="confirma_senha">Confirme a Senha:</label>
+          <input name="confirma_senha" id="confirma_senha" type="password" placeholder="Confirme sua senha...">
+        </div>
+        <div class="button">
+          <button>Adicionar</button>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 
