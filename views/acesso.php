@@ -13,9 +13,28 @@
   <title>QR Presença</title>
 </head>
 
+
 <body>
-<button onclick="window.location='/ProjetoQR/qrcode/scan.html'"> Entrar </button> 
+
+  <form>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" placeholder="Digite sua idade" required>
+
+    <label for="turma/turno">Turma:</label>
+    <input type="turma" id="turma" placeholder="Digite sua turma/turno" required>
+
+    <button type="button" onclick="gerarqr()">Gerar QR Code</button>
+    <a id="downloadLink" download="qrcode.png"><button id="downloadButton" style="display:none">Baixar QR Code</button></a>
+  </form>
+
+  <img id="QRcodeimag" alt="QR Code" />
+
+  <script src="script.js"></script>
 </body>
+
 
 
 </html>

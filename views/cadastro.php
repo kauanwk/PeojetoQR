@@ -37,11 +37,11 @@ if (isset($_SESSION['success_message'])) {
         </div>
         <div class="container-form">
           <label for="idade">Idade:</label>
-          <input name="idade" id="idade" placeholder="Coloque sua idade...">
+          <input name="idade" type="number" id="idade" placeholder="Coloque sua idade...">
         </div>
         <div class="container-form">
           <label for="email">E-mail:</label>
-          <input name="email" id="email" placeholder="Digite seu e-mail...">
+          <input name="email" type="email" id="email" placeholder="Digite seu e-mail...">
         </div>
         <div class="container-form">
           <label for="telefone">Telefone:</label>
