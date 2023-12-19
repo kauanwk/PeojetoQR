@@ -16,8 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verifica se as credenciais são válidas
         if ($stmt->rowCount() > 0) {
-            // Credenciais válidas, redirecione ou faça outras ações
-            header("Location: /ProjetoQR/views/acesso.php");
+            // Recupere os dados do usuário para gerar o QR Code
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+            $nome = $usuario['nome'];
+            $idade = $usuario['idade'];
+            $email = $usuario['email'];
+
+            // Redirecionamento para qrCode.php passando os dados necessários via URL
+            header("Location: /ProjetoQR/views/qrCode.php?nome=$nome&idade=$idade&email=$email");
             exit();
         } else {
             // Credenciais inválidas
@@ -32,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

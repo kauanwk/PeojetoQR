@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/welcome_page.css">
-  <title><?php echo $pageTitle; ?></title>
+  <link rel="stylesheet" href="../css/sobre.css">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <title>Sobre</title>
 </head>
 
 <body>
-  <?php
-$pageTitle = "Sobre nós";
-
-if (isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])) {
-  $previousPage = $_SERVER['HTTP_REFERER'];
-} else {
-  $previousPage = '/ProjetoQR/views/default.php';
-}
-
-?>
+  <div class="head">
+    <div class="head-img"> <img src="../images/logo.png" alt=""> </div>
+    <div class="head-link">
+      <h2 onclick="window.location='sobre.php'">Sobre</h2>
+      <h2 onclick="window.location='cadastro.php'">Cadastro</h2>
+      <h2 onclick="window.location='login.php'">Login</h2>
+    </div>
+  </div>
 
   <div class="container">
     <div class="butao">
-      <a href="<?php echo $previousPage; ?>">Voltar</a>
+      <a href="cadastro.php">Voltar</a> <!-- Altere o link para a página que deseja retornar -->
     </div>
 
     <div class="tela">
-      <h1>Sobre o ProjetoQR</h1>
+      <h1 class="titulo">Sobre o ProjetoQR</h1>
     </div>
 
     <div class="sobre">
@@ -39,7 +40,6 @@ if (isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])) {
 
     <img class="tamanhoimg" src="../images/winners.gif" alt="">
   </div>
-
 </body>
 
 </html>
