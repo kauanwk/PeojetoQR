@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email = $usuario['email'];
 
             // Redirecionamento para qrCode.php passando os dados necessários via URL
-            header("Location: /ProjetoQR/views/qrCode.php?nome=$nome&idade=$idade&email=$email");
+            header("Location: /ProjetoQR/views/qrCode.php");
             exit();
         } else {
             // Credenciais inválidas
