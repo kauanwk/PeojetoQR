@@ -35,15 +35,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  align-items: center;
 }
 
-.butao {
-  margin-bottom: 20px;
-}
-
-.butao a {
-  color: blue;
-  text-decoration: none;
+.content {
+  flex: 1;
 }
 
 .tela {
@@ -52,18 +49,18 @@ body {
 }
 
 .titulo {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: bold;
+  text-align: center; /* Centralizando o título */
+  margin-bottom: 20px;
 }
 
 .sobre {
   margin-bottom: 20px;
+  flex: 1;
 }
 
 .p-sobre {
   color: #333;
-}
-
-.tamanhoimg {
-  width: 100%;
+  font-size: 1.5em; /* Aumentei o tamanho do texto */
 }

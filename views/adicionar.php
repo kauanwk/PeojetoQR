@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($senha != $confirma_senha) {
             throw new Exception("As senhas não coincidem. Por favor, tente novamente.");
         }
-        
+
 
         // Prepare a consulta SQL com valores de espaço reservado
         $sql = "INSERT INTO cadastro (nome, email, idade, senha) VALUES (?, ?, ?, ?)";
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['success_message'] = "Registro inserido com sucesso!";
 
         // Redirecione para /ProjetoQR/views/index.php
-        header("Location: /ProjetoQR/views/login.php");
+        header("Location: /ProjetoQR/views/index.php");
         exit(); // Certifique-se de sair após o redirecionamento para evitar execução adicional do código
     } catch (Exception $e) {
         // Em caso de erro, redirecione de volta para a página de cadastro com uma mensagem de erro

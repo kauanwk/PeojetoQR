@@ -1,13 +1,24 @@
 function gerarqr() {
   var nome = document.getElementById("nome").value;
   var idade = document.getElementById("idade").value;
-  var email = document.getElementById("email").value;
-  var inputData = "Nome: " + nome + ", Idade: " + idade + ", E-mail: " + email;
+  var turma = document.getElementById("turma").value;
+  var turno = document.getElementById("turno").value;
+
+  var inputData =
+    "Nome: " +
+    nome +
+    ", Idade: " +
+    idade +
+    ", Turma: " +
+    turma +
+    ", Turno: " +
+    turno;
+
   var GoogleChartAPI =
     "https://chart.googleapis.com/chart?cht=qr&chs=500x500&chl=";
   GoogleChartAPI = GoogleChartAPI + encodeURI(inputData);
+
   document.querySelector("#QRcodeimag").src = GoogleChartAPI;
-  document.getElementById("downloadLink").href = GoogleChartAPI;
   document.getElementById("downloadButton").style.display = "block";
 
   // Salvar dados no banco de dados

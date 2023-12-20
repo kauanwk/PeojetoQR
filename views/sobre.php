@@ -21,10 +21,6 @@
   </div>
 
   <div class="container">
-    <div class="butao">
-      <a href="cadastro.php">Voltar</a> <!-- Altere o link para a página que deseja retornar -->
-    </div>
-
     <div class="tela">
       <h1 class="titulo">Sobre o ProjetoQR</h1>
     </div>
