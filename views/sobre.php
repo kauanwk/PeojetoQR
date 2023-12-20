@@ -34,7 +34,7 @@
         Projetado foi feito pelos alunos do Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco IFPE do campus Igarassu.
         Do curso técnico de IPI 2º período, na disciplina de projeto e prática do professor Alexadre, criado na data 01/09/2023.
         O foco do projeto é facilitar a vida dos outros kkk.
-        Alunos desenvolvedores do nosso projeto: Emanuel, Kauã Felix, André, José Lucas, Vinicius, Guilherme, Galego.
+        Alunos desenvolvedores do nosso projeto: Emanuel, Kauã Felix, André, José Lucas, Vinicius, Guilherme, Marlon.
       </p>
     </div>
 
