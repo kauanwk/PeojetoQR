@@ -21,8 +21,8 @@ if (isset($_SESSION['success_message'])) {
     <div class="head-img"> <img src="../images/logo.png" alt=""> </div>
     <div class="head-link">
       <h2 onclick="window.location='sobre.php'">Sobre</h2>
-      <h2 onclick="window.location='cadastro.php'">Cadastro</h2>
       <h2 onclick="window.location='login.php'">Login</h2>
+      <h2 onclick="window.location='index.php'">Sair</h2>
     </div>
   </div>
   <div class="main">

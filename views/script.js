@@ -25,6 +25,14 @@ function gerarqr() {
   saveInBD(inputData);
 }
 
+function baixarQR() {
+  var imagemQR = document.getElementById("QRcodeimag").src;
+  var linkDownload = document.createElement("a");
+  linkDownload.href = imagemQR;
+  linkDownload.download = "QRCode.png"; // Nome do arquivo a ser baixado
+  linkDownload.click();
+}
+
 function saveInBD(data) {
   fetch("https://seuservidor.com/api/salvar-dados", {
     method: "POST",

@@ -1,9 +1,23 @@
+/* Reset e estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
+/* Estilos da barra de navegação */
 .head {
   width: 100%;
   padding-top: 10px;
@@ -24,6 +38,7 @@ body {
   margin-left: 37%;
   margin-top: 20px;
   gap: 100px;
+  font-family: "Lato", sans-serif;
   cursor: pointer;
 }
 
@@ -31,6 +46,7 @@ body {
   color: white;
 }
 
+/* Estilos específicos da página 'sobre.php' */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -49,18 +65,35 @@ body {
 }
 
 .titulo {
+  color: white;
   font-size: 3em;
   font-weight: bold;
-  text-align: center; /* Centralizando o título */
-  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 500px;
+  margin-left: 20px;
+  margin-right: -650px;
 }
 
 .sobre {
-  margin-bottom: 20px;
-  flex: 1;
+  flex: 2;
+  text-align: justify;
+  margin-right: 20px;
 }
 
 .p-sobre {
-  color: #333;
-  font-size: 1.5em; /* Aumentei o tamanho do texto */
+  font-size: 30px;
+  line-height: 1.6;
+  color: white;
+  font-family: "Lato", sans-serif;
+  margin-left: -150px;
+  margin-top: 150px;
+}
+
+.divf {
+  flex: 1;
+}
+
+.img1 {
+  max-width: 150%;
 }

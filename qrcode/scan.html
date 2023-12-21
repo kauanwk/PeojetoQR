@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/scan.css">
   <title>QR Code Scanner</title>
   <!-- Inclua a biblioteca html5-qrcode do CDN -->
   <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 </head>
+
 <body>
   <!-- Contêiner HTML para o scanner -->
   <div id="reader" style="width: 600px;"></div>
@@ -50,7 +53,7 @@
       cell1.innerHTML = decodedText;
     }
 
-   
+
   </script>
 
   <!-- Código do Scanner -->
@@ -60,4 +63,5 @@
     html5QrcodeScanner.render(onScanSuccess, onScanFailure);
   </script>
 </body>
+
 </html>

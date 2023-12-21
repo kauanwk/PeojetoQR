@@ -39,7 +39,7 @@ body {
 
 .head-lin {
   display: flex;
-  margin-left: 37%;
+  margin-left: 90%;
   margin-top: -60px;
   gap: 100px;
   color: white;
@@ -104,6 +104,11 @@ button:hover {
 #QRcodeimag {
   width: 300px;
   float: right;
-  margin-right: 550px;
-  margin-top: -20%;
+  margin-right: 500px;
+  margin-top: -25%;
+}
+
+:required {
+  font-size: 20px;
+  color: black;
 }

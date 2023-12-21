@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email = $usuario['email'];
 
             // Redirecionamento para qrCode.php passando os dados necessários via URL
-            header("Location: /ProjetoQR/views/qrCode.php?nome=$nome&idade=$idade&email=$email");
+            header("Location: /ProjetoQR/views/qrCode.php");
             exit();
         } else {
             // Credenciais inválidas
@@ -36,8 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // $conexao = null;
     }
 }
-?>
-
 ?>
 
 
@@ -62,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="head-link">
       <h2 onclick="window.location='sobre.php'">Sobre</h2>
       <h2 onclick="window.location='cadastro.php'">Cadastro</h2>
-      <h2 onclick="window.location='login.php'">Login</h2>
+      <h2 onclick="window.location='index.php'">Sair</h2>
     </div>
 
   </div>
